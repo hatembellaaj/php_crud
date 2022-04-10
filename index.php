@@ -15,13 +15,15 @@
         <h2>Crud en Php</h2>
         <p>
         <p>
-
+        <a href="./create.html">Create User </a>
         <table>
             <thead>
                 <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Editer</th>
+                <th>Supprimer</th>
             </thead>
 
             <?php
@@ -51,6 +53,8 @@
                         echo "<td> ". $row['fname'] . "</td>" ;
                         echo "<td> ". $row['lname'] . "</td>" ;
                         echo "<td> ". $row['email'] . "</td>" ;
+                        echo "<td name=". $row['id'] ."> <a href='./update.php?id=" . $row['id'] . "'>Update</a></td>" ;
+                        echo "<td name=". $row['id'] ."> Supprimer </td>" ;
                         echo "</tr>" ;
                     }
                 } else {

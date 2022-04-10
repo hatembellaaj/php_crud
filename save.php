@@ -12,12 +12,13 @@ if ($conn->connect_error) {
 }
 
 //create sql request 
+$id=$_POST["id"];
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
 
-$sql = "INSERT INTO client( fname, lname, email) VALUES ('".$fname."','".$lname."','".$email."')";
 
+$sql ="UPDATE client SET fname='".$fname."',lname='".$lname."',email='".$fname."' WHERE id=".$id;
 
 //execute request 
 if ($conn->query($sql) === TRUE) {
